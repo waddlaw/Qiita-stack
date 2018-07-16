@@ -1,0 +1,16 @@
+resolver: lts-12.0
+packages:
+- .
+build:
+  haddock: true
+  haddock-arguments:
+    haddock-args:
+    - --odir=haddock
+  open-haddocks: false
+  haddock-internal: false
+  haddock-hyperlink-source: true
+
+image:
+  container:
+    name: pfad
+    base: "fpco/stack-run"

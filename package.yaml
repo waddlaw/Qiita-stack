@@ -1,0 +1,67 @@
+name:                PFAD
+version:             0.1.0.0
+github:              "waddlaw/PFAD"
+license:             BSD3
+author:              "Shinya Yamaguchi"
+maintainer:          "ingroze@gmail.com"
+copyright:           "Copyright (c) 2018 Shinya Yamaguchi"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Your Projects Category
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/waddlaw/PFAD#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- array
+
+library:
+  source-dirs: src
+
+executables:
+  minfree:
+    main:                app/Main.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - PFAD
+  minfree2:
+    main:                app/Main2.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - PFAD
+
+tests:
+  PFAD-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - PFAD
+    - hspec
+    - QuickCheck
+  PFAD-doctest:
+    main: test/doctests.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - PFAD
+    - doctest
