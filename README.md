@@ -17,7 +17,7 @@ $ stack --numeric-version
 
 ```shell
 $ cat stack.yaml | head -n 1
-resolver: lts-12.0
+resolver: lts-13.1
 ```
 
 ## ビルド方法
