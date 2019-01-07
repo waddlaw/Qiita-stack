@@ -58,4 +58,8 @@ tests:
     dependencies:
     - PFAD
     - doctest
+    # https://github.com/phadej/cabal-doctest#notes
+    # If you use QuickCheck properties (prop>) in your doctests,
+    # the test-suite doctest should depend on QuickCheck and template-haskell.
     - QuickCheck
+    - template-haskell
