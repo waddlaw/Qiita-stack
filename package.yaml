@@ -16,6 +16,12 @@ dependencies:
 - base >= 4.7 && < 5
 - array
 
+custom-setup:
+  dependencies:
+  - base
+  - Cabal
+  - cabal-doctest
+
 library:
   source-dirs: src
 
@@ -58,8 +64,3 @@ tests:
     dependencies:
     - PFAD
     - doctest
-    # https://github.com/phadej/cabal-doctest#notes
-    # If you use QuickCheck properties (prop>) in your doctests,
-    # the test-suite doctest should depend on QuickCheck and template-haskell.
-    - QuickCheck
-    - template-haskell

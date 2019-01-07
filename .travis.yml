@@ -81,6 +81,9 @@ install:
       
       hpack .
 
+      cabal new-update
+      cabal new-install hspec-discover
+
       cabal --numeric-version
       hpack --version
       ghc --version
@@ -107,7 +110,6 @@ script:
       curl -sL https://raw.github.com/ndmitchell/hlint/master/misc/travis.sh | sh -s .
       ;;
     cabal)
-      cabal new-update
       cabal new-test all
       ;;
     stack)

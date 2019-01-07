@@ -2,4 +2,4 @@
 PFAD.cabal
 *~
 dist-newstyle/
-.ghc.environement.*
+.ghc.environment.*
