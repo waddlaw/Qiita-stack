@@ -1,3 +1,5 @@
 .stack-work/
 PFAD.cabal
 *~
+dist-newstyle/
+.ghc.environement.*
