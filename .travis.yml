@@ -110,7 +110,7 @@ script:
       curl -sL https://raw.github.com/ndmitchell/hlint/master/misc/travis.sh | sh -s .
       ;;
     cabal)
-      cabal new-test all
+      cabal new-build
       ;;
     stack)
       stack --no-terminal $ARGS test --haddock --no-haddock-deps
