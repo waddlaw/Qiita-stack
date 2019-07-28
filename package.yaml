@@ -1,10 +1,8 @@
 name:                PFAD
 version:             0.1.0.0
 github:              "waddlaw/PFAD"
-license:             BSD3
-author:              "Shinya Yamaguchi"
-maintainer:          "ingroze@gmail.com"
-copyright:           "2018-2019 Shinya Yamaguchi"
+author:              "Shinya Yamguchi"
+copyright:           "2019 Shinya Yamguchi"
 
 extra-source-files:
 - README.md
@@ -16,26 +14,20 @@ dependencies:
 - base >= 4.7 && < 5
 - array
 
-custom-setup:
-  dependencies:
-  - base
-  - Cabal
-  - cabal-doctest
-
 library:
   source-dirs: src
 
 executables:
   minfree:
-    main:                app/Main.hs
+    main: app/Main.hs
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
     - PFAD
-  minfree2:
-    main:                app/Main2.hs
+  fastMinfree:
+    main: app/FastMinfreeApp.hs
     ghc-options:
     - -threaded
     - -rtsopts
@@ -64,3 +56,31 @@ tests:
     dependencies:
     - PFAD
     - doctest
+  PFAD-tasty:
+    main: Tasty.hs
+    source-dirs: test-tasty
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - PFAD
+    - tasty
+    - tasty-hunit
+    - tasty-quickcheck
+    - tasty-hspec
+    - hspec
+    - tasty-expected-failure
+    - tasty-golden
+
+benchmarks:
+  criterion:
+    main: bench/Criterion.hs
+    dependencies:
+    - criterion
+    - PFAD
+  gauge:
+    main: bench/Gauge.hs
+    dependencies:
+    - gauge
+    - PFAD

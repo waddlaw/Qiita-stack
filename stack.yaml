@@ -1,4 +1,4 @@
-resolver: lts-13.1
+resolver: lts-13.29
 packages:
 - .
 build:
@@ -9,8 +9,3 @@ build:
   open-haddocks: false
   haddock-internal: false
   haddock-hyperlink-source: true
-
-image:
-  container:
-    name: pfad
-    base: "fpco/stack-run"

@@ -12,12 +12,12 @@ Codename:       bionic
 
 ```shell
 $ stack --numeric-version
-1.9.3
+2.1.3
 ```
 
 ```shell
 $ cat stack.yaml | head -n 1
-resolver: lts-13.1
+resolver: lts-13.29
 ```
 
 ## ビルド方法
@@ -31,4 +31,7 @@ $ stack test
 
 # haddock
 $ stack haddock
+
+# ベンチマーク
+$ stack bench
 ```
