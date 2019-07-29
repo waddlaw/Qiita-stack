@@ -40,15 +40,15 @@ spec_hspec = do
 test_tasty :: TestTree
 test_tasty = testGroup "Unit tests"
   [ testCase "List comparison (different length)" $
-      [1, 2, 3] `compare` [1,2] @?= GT
+      "abc" `compare` "ab" @?= GT
   , testCase "List comparison (same length)" $
-      [1, 2, 3] `compare` [1,2,2] @?= GT
+      "abc" `compare` "abb" @?= GT
   ]
 
 test_failure :: TestTree
 test_failure = expectFail $ testGroup "Unit tests"
   [ testCase "different length" $
-      length [1, 2, 3] @?= 0
+      length "abc" @?= 0
   ]
 
 test_goldenFile :: TestTree
