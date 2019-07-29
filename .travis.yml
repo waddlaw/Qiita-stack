@@ -14,18 +14,18 @@ env:
 matrix:
   fast_finish: true
   include:
-    - env: BUILD=stack ARGS="--resolver lts-13.29 --system-ghc"
+    - env: BUILD=stack ARGS="--system-ghc"
       ghc: "8.6.5"
 
     - env: BUILD=style
       ghc: "8.6.5"
 
-    - env: BUILD=pedantic ARGS="--resolver lts-13.29 --system-ghc"
+    - env: BUILD=pedantic ARGS="--system-ghc"
       ghc: "8.6.5"
 
   allow_failures:
     - env: BUILD=style
-    - env: BUILD=pedantic ARGS="--resolver lts-13.29 --system-ghc"
+    - env: BUILD=pedantic ARGS="--system-ghc"
 
 before_install:
   - case "$BUILD" in
