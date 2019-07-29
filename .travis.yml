@@ -69,7 +69,7 @@ script:
       curl -sL https://raw.github.com/ndmitchell/hlint/master/misc/travis.sh | sh -s .
       ;;
     stack)
-      stack --no-terminal $ARGS test --haddock --no-haddock-deps
+      stack --no-terminal $ARGS test --no-haddock-deps
       ;;
     pedantic)
       stack --no-terminal $ARGS test --pedantic --no-run-tests
