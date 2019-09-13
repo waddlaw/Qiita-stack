@@ -17,5 +17,5 @@ jobs:
 
     - name: Build & test
       run: |
-        stack install tasty-discover
+        stack install tasty-discover --stack-root $HOME --allow-different-user
         stack test --fast --stack-root $HOME --allow-different-user
