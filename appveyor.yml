@@ -26,6 +26,11 @@ for:
     environment:
       global:
         GHCOPTS: --forcex86
+        
+init:
+- ps: Set-WinSystemLocale ja-JP
+- ps: Start-Sleep -s 5
+- ps: Restart-Computer
 
 install:
  - choco install -y haskell-stack
@@ -36,5 +41,4 @@ before_build:
  - stack install tasty-discover
 
 build_script:
- - cmd: chcp 65001
  - cmd: stack test
