@@ -1,7 +1,5 @@
 name: stack
 
-on: [pull_request]
-
 jobs:
   build:
     runs-on: ubuntu-18.04
