@@ -4,11 +4,6 @@ clone_depth: 5
 # Do not build feature branch with open Pull Requests
 skip_branch_with_pr: true
 
-init:
-- ps: Set-WinSystemLocale ja-JP
-- ps: Start-Sleep -s 5
-- ps: Restart-Computer
-
 platform:
   - x64
   - x86
@@ -42,5 +37,5 @@ before_build:
  - stack --version
  - stack install tasty-discover
 
-build_script:
- - cmd: stack test
+# build_script:
+#  - cmd: echo "" | stack test
