@@ -37,5 +37,5 @@ before_build:
  - stack --version
  - stack install tasty-discover
 
-# build_script:
-#  - cmd: echo "" | stack test
+build_script:
+ - cmd: echo "" | stack test
