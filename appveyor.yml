@@ -13,8 +13,6 @@ environment:
     CHOCOCMD: ghc --version %GHCVER%
   matrix:
     - GHCVER: 8.6.5
-#     - GHCVER: 8.4.4
-#     - GHCVER: 8.2.2
 
 cache:
   - '%LOCALAPPDATA%\Programs\stack\'
@@ -38,4 +36,5 @@ before_build:
  - stack install tasty-discover
 
 build_script:
- - cmd: echo "" | stack test
+ - cmd: chcp 65001
+ - cmd: stack test
