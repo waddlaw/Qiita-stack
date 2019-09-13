@@ -13,8 +13,8 @@ environment:
     CHOCOCMD: ghc --version %GHCVER%
   matrix:
     - GHCVER: 8.6.5
-    - GHCVER: 8.4.4
-    - GHCVER: 8.2.2
+#     - GHCVER: 8.4.4
+#     - GHCVER: 8.2.2
 
 cache:
   - '%LOCALAPPDATA%\Programs\stack\'
