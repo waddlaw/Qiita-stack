@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/waddlaw/Qiita-stack.svg?branch=master)](https://travis-ci.org/waddlaw/Qiita-stack)
 [![CircleCI](https://circleci.com/gh/waddlaw/Qiita-stack.svg?style=svg)](https://circleci.com/gh/waddlaw/Qiita-stack)
+[![Build status](https://ci.appveyor.com/api/projects/status/hkoxs4601ogg5f8b?svg=true)](https://ci.appveyor.com/project/waddlaw/qiita-stack)
+![](https://github.com/waddlaw/Qiita-stack/workflows/stack/badge.svg)
 
 # Qiita-stack
 
