@@ -35,7 +35,6 @@ install:
 
 before_build:
  - stack --version
- - ghc --version
 
 build_script:
  - cmd: stack test
