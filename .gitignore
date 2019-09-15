@@ -4,3 +4,4 @@ PFAD.cabal
 dist-newstyle/
 .ghc.environment.*
 stack.yaml.lock
+bin/
